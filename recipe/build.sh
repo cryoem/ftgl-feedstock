@@ -4,4 +4,5 @@
             --disable-freetypetest
 
 make
+make check
 make install
