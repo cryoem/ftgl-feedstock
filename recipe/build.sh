@@ -1,14 +1,14 @@
 #!/bin/bash
 
-export FREETYPE=${PREFIX}
-export LD_LIBRARY_PATH=$PREFIX/lib:$LD_LIBRARY_PATH
 
-if [ "$(uname)" == "Linux" ]; then
-	./configure --prefix=$PREFIX --enable-shared LIBS="-lGL -lGLU -lm -ldl -lXxf86vm -lpthread"
-elif [ "$(uname)" == "Darwin" ]; then
-	./configure --prefix=$PREFIX --enable-shared
-fi
+build_dir=${SRC_DIR}/../build_ftgl
 
-make -j
-make check
+mkdir $build_dir && cd $build_dir
+cmake ${SRC_DIR} -DCMAKE_INSTALL_PREFIX=$PREFIX \
+                 -DCMAKE_PREFIX_PATH=$PREFIX \
+                 -DCMAKE_FIND_ROOT_PATH=$PREFIX \
+                 -DCMAKE_BUILD_TYPE=Release \
+                 -DCMAKE_C_FLAGS=-L$PREFIX/lib
+
+make
 make install
