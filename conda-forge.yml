@@ -1,4 +1,5 @@
 channels:
+  sources: [defaults]
   targets:
   - [cryoem, main]
 github:
