@@ -17,6 +17,7 @@ build:
 requirements:
   build:
     - freetype
+    - cmake     # [win]
   
   run:
     - freetype
