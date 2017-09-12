@@ -19,6 +19,8 @@ requirements:
     - freetype
     - cmake     # [win]
   
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}  
   run:
     - freetype
 

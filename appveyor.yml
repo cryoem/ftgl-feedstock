@@ -9,10 +9,6 @@ environment:
     secure: OcAUZlpSDgQtX8QAIX7qr8iZhsrOWwlmuyDECE7wAYBRlvXIBJ7BbXhX/Fmz4Oib
 
   matrix:
-    - TARGET_ARCH: x86
-      CONDA_PY: 27
-      CONDA_INSTALL_LOCN: C:\\Miniconda
-
     - TARGET_ARCH: x64
       CONDA_PY: 27
       CONDA_INSTALL_LOCN: C:\\Miniconda-x64
@@ -46,13 +42,10 @@ install:
     - cmd: conda config --add channels conda-forge
 
     # Configure the VM.
-    - cmd: conda install -n root --quiet --yes conda-forge-build-setup
-    - cmd: run_conda_forge_build_setup
+    - cmd: conda install -n root --quiet --yes conda-build
 
 # Skip .NET project specific build phase.
 build: off
 
 test_script:
-    - conda build recipe --quiet
-deploy_script:
-    - cmd: upload_or_check_non_existence .\recipe cryoem --channel=main
+    - conda build recipe --quiet -c c3i_test
