@@ -49,4 +49,4 @@ install:
 build: off
 
 test_script:
-    - conda build recipe --quiet -c c3i_test
+    - conda build recipe --quiet
