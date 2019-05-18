@@ -16,8 +16,12 @@ build:
 
 requirements:
   build:
-    - freetype
     - cmake     # [win]
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}  
+
+  host:
+    - freetype
   
   run:
     - freetype
