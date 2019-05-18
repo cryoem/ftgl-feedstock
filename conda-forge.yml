@@ -12,3 +12,8 @@ travis:
 appveyor:
   secure:
     BINSTAR_TOKEN: DytmJU8Iq1lbelvMvcsTjak25U7QPYCTMr8QmMzqRw21AmRfcLQhfuNPZtjH13q9
+
+provider:
+  linux: circle
+  osx: travis
+  win: appveyor
