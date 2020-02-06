@@ -1,13 +1,11 @@
+CMAKE_GENERATOR:
+- NMake Makefiles
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - cryoem main
 cxx_compiler:
-- gxx
-cxx_compiler_version:
-- '7'
-docker_image:
-- condaforge/linux-anvil-comp7
+- vs2015
 freetype:
 - 2.9.1
 pin_run_as_build:
