@@ -64,10 +64,17 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win</td>
+              <td>win_cxx_compilervs2008</td>
               <td>
                 <a href="https://dev.azure.com/cryoem/feedstock-builds/_build/latest?definitionId=blank&branchName=master">
-                  <img src="https://dev.azure.com/cryoem/feedstock-builds/_apis/build/status/ftgl-feedstock?branchName=master&jobName=win&configuration=win_" alt="variant">
+                  <img src="https://dev.azure.com/cryoem/feedstock-builds/_apis/build/status/ftgl-feedstock?branchName=master&jobName=win&configuration=win_cxx_compilervs2008" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_cxx_compilervs2015</td>
+              <td>
+                <a href="https://dev.azure.com/cryoem/feedstock-builds/_build/latest?definitionId=blank&branchName=master">
+                  <img src="https://dev.azure.com/cryoem/feedstock-builds/_apis/build/status/ftgl-feedstock?branchName=master&jobName=win&configuration=win_cxx_compilervs2015" alt="variant">
                 </a>
               </td>
             </tr>
