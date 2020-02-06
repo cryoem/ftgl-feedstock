@@ -1,0 +1,11 @@
+CMAKE_GENERATOR:
+- NMake Makefiles
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- cryoem main
+freetype:
+- 2.9.1
+pin_run_as_build:
+  freetype:
+    max_pin: x
