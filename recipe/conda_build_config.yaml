@@ -2,3 +2,5 @@
 #- cryoem, defaults,conda-forge
 channel_targets:
 - cryoem main
+cxx_compiler:   # [win]
+  - vs2015      # [win]
