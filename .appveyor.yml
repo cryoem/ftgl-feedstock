@@ -10,10 +10,7 @@ environment:
     secure: hhS98dVbKVMiq1d7IEUyMCfA9Be1YSA2+BfDYf+1wwLYdOoWLWVaehGr6/mjqeAv
 
   matrix:
-    - CONFIG: win_cxx_compilervs2008
-      CONDA_INSTALL_LOCN: C:\Miniconda36-x64
-
-    - CONFIG: win_cxx_compilervs2015
+    - CONFIG: win_
       CONDA_INSTALL_LOCN: C:\Miniconda36-x64
 
 
