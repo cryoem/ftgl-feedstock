@@ -15,10 +15,12 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ cdt('mesa-libgl-devel') }}   # [linux]
     - cmake
 
   host:
     - freetype
+    - libglu  # [linux]
   
   run:
     - freetype
