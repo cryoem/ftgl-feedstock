@@ -10,7 +10,7 @@ source:
   fn: ftgl-bceab5929f62a8adf5ddf68401d45ebe790260da.zip
 
 build:
-  number: 0
+  number: 2
 
 requirements:
   build:
