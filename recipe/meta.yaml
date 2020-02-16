@@ -1,13 +1,13 @@
 {% set name = "ftgl" %}
-{% set branch = "master" %}
+{% set branch = "2.3.0" %}
 
 package:
   name: {{ name }}
-  version: 2.3.0
+  version: {{ branch }}
 
 source:
-  url: https://github.com/frankheckenbach/ftgl/archive/d48ee410fee783f922c04f60ce475903ab70cd43.zip
-  fn: ftgl-d48ee410fee783f922c04f60ce475903ab70cd43.zip
+  url: https://github.com/frankheckenbach/{{ name }}/archive/{{ branch }}.zip
+  fn: {{ name }}-{{ branch }}.zip
 
 build:
   number: 0
