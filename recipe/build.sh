@@ -1,8 +1,8 @@
 #!/bin/bash
 
-./configure --prefix=$PREFIX \
-            --disable-freetypetest
+set -x
 
-make
-make check
+cmake . -DCMAKE_INSTALL_PREFIX=${PREFIX}
+
+make -j${CPU_COUNT}
 make install
