@@ -1,6 +1,6 @@
 {% set name = "ftgl" %}
-{% set version = "2.3.1" %}
-{% set branch  = version %}
+{% set version = "2.4.0" %}
+{% set branch  = "v" + version %}
 
 package:
   name:    {{ name }}
