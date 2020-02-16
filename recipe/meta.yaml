@@ -1,9 +1,10 @@
 {% set name = "ftgl" %}
-{% set branch = "2.3.1" %}
+{% set version = "2.3.1" %}
+{% set branch  = version %}
 
 package:
-  name: {{ name }}
-  version: {{ branch }}
+  name:    {{ name }}
+  version: {{ version }}
 
 source:
   url: https://github.com/frankheckenbach/{{ name }}/archive/{{ branch }}.zip
