@@ -13,7 +13,7 @@ source:
     - remove-asserts.diff
 
 build:
-  number: 0
+  number: 2
   run_exports:
     # Hasn't been updated in years so pin tightly
     - {{ pin_subpackage('ftgl', max_pin='x.x.x') }}
