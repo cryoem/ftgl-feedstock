@@ -1,0 +1,43 @@
+From f0ce9b5f857908349b25d0594e8f0ac0a4e7661e Mon Sep 17 00:00:00 2001
+From: shadow_walker <shadowwalkersb@gmail.com>
+Date: Tue, 25 Feb 2020 15:22:36 -0600
+Subject: [PATCH] remove asserts
+
+---
+ src/FTGlyph/FTTextureGlyph.cpp | 18 ------------------
+ 1 file changed, 18 deletions(-)
+
+diff --git a/src/FTGlyph/FTTextureGlyph.cpp b/src/FTGlyph/FTTextureGlyph.cpp
+index 8644d19..81fe44d 100644
+--- a/src/FTGlyph/FTTextureGlyph.cpp
++++ b/src/FTGlyph/FTTextureGlyph.cpp
+@@ -111,26 +111,8 @@ FTTextureGlyphImpl::FTTextureGlyphImpl(FT_GlyphSlot glyph, int id, int xOffset,
+         glPixelStorei(GL_UNPACK_ROW_LENGTH, 0);
+         glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+ 
+-        GLint w,h;
+-
+         glBindTexture(GL_TEXTURE_2D, glTextureID);
+-        glGetTexLevelParameteriv(GL_TEXTURE_2D, 0, GL_TEXTURE_WIDTH, &w);
+-        glGetTexLevelParameteriv(GL_TEXTURE_2D, 0, GL_TEXTURE_HEIGHT, &h);
+-
+-        FTASSERT(xOffset >= 0);
+-        FTASSERT(yOffset >= 0);
+-        FTASSERT(destWidth >= 0);
+-        FTASSERT(destHeight >= 0);
+-        FTASSERT(xOffset + destWidth <= w);
+-        FTASSERT(yOffset + destHeight <= h);
+ 
+-        if (yOffset + destHeight > h)
+-        {
+-            // We'll only get here if we are soft-failing our asserts. In that
+-            // case, since the data we're trying to put into our texture is
+-            // too long, we'll only copy a portion of the image.
+-            destHeight = h - yOffset;
+-        }
+         if (destHeight >= 0)
+         {
+             // convert bitmap fonts
+-- 
+2.20.1
+

@@ -9,8 +9,9 @@ package:
 source:
   url: https://github.com/frankheckenbach/{{ name }}/archive/{{ branch }}.zip
   fn: {{ name }}-{{ branch }}.zip
-  {% if branch == "v2.4.0" %}
   patches:
+    - remove-asserts.diff
+  {% if branch == "v2.4.0" %}
     # This patch (https://github.com/frankheckenbach/ftgl/commit/835f2ba7911a6c15a1a314d5e3267fa089b5a319) is needed for v2.4.0.
     - cmake-remove-FTLibrary.h.diff
   {% endif %}
