@@ -16,6 +16,3 @@ provider:
   linux: circle
   osx: travis
   win: appveyor
-
-azure:
-  build_id: blank
