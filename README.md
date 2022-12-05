@@ -20,20 +20,6 @@ Current build status
         <img alt="Linux" src="https://img.shields.io/circleci/project/github/cryoem/ftgl-feedstock/master.svg?label=Linux">
       </a>
     </td>
-  </tr><tr>
-    <td>Travis</td>
-    <td>
-      <a href="https://app.travis-ci.com/cryoem/ftgl-feedstock">
-        <img alt="linux" src="https://img.shields.io/travis/com/cryoem/ftgl-feedstock/master.svg?label=Linux">
-      </a>
-    </td>
-  </tr><tr>
-    <td>Appveyor</td>
-    <td>
-      <a href="https://ci.appveyor.com/project/cryoem/ftgl-feedstock/branch/master">
-        <img alt="windows" src="https://img.shields.io/appveyor/ci/cryoem/ftgl-feedstock/master.svg?label=Windows">
-      </a>
-    </td>
   </tr>
 </table>
 
