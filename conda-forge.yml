@@ -14,5 +14,5 @@ appveyor:
 
 provider:
   linux: circle
-  osx: travis
-  win: appveyor
+  osx: github_actions
+  win: github_actions
