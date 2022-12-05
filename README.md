@@ -5,11 +5,9 @@ Home: http://sourceforge.net/projects/ftgl/
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/cryoem/ftgl-feedstock/blob/master/LICENSE.txt)
 
 Summary: 
-
-
 
 Current build status
 ====================
@@ -25,8 +23,8 @@ Current build status
   </tr><tr>
     <td>Travis</td>
     <td>
-      <a href="https://travis-ci.org/cryoem/ftgl-feedstock">
-        <img alt="macOS" src="https://img.shields.io/travis/cryoem/ftgl-feedstock/master.svg?label=macOS">
+      <a href="https://app.travis-ci.com/cryoem/ftgl-feedstock">
+        <img alt="linux" src="https://img.shields.io/travis/com/cryoem/ftgl-feedstock/master.svg?label=Linux">
       </a>
     </td>
   </tr><tr>
@@ -35,51 +33,6 @@ Current build status
       <a href="https://ci.appveyor.com/project/cryoem/ftgl-feedstock/branch/master">
         <img alt="windows" src="https://img.shields.io/appveyor/ci/cryoem/ftgl-feedstock/master.svg?label=Windows">
       </a>
-    </td>
-  </tr>
-    
-  <tr>
-    <td>Azure</td>
-    <td>
-      <details>
-        <summary>
-          <a href="https://dev.azure.com/cryoem/feedstock-builds/_build/latest?definitionId=blank&branchName=master">
-            <img src="https://dev.azure.com/cryoem/feedstock-builds/_apis/build/status/ftgl-feedstock?branchName=master">
-          </a>
-        </summary>
-        <table>
-          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
-          <tbody><tr>
-              <td>linux</td>
-              <td>
-                <a href="https://dev.azure.com/cryoem/feedstock-builds/_build/latest?definitionId=blank&branchName=master">
-                  <img src="https://dev.azure.com/cryoem/feedstock-builds/_apis/build/status/ftgl-feedstock?branchName=master&jobName=linux&configuration=linux_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx</td>
-              <td>
-                <a href="https://dev.azure.com/cryoem/feedstock-builds/_build/latest?definitionId=blank&branchName=master">
-                  <img src="https://dev.azure.com/cryoem/feedstock-builds/_apis/build/status/ftgl-feedstock?branchName=master&jobName=osx&configuration=osx_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win</td>
-              <td>
-                <a href="https://dev.azure.com/cryoem/feedstock-builds/_build/latest?definitionId=blank&branchName=master">
-                  <img src="https://dev.azure.com/cryoem/feedstock-builds/_apis/build/status/ftgl-feedstock?branchName=master&jobName=win&configuration=win_" alt="variant">
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </details>
-    </td>
-  </tr>
-  <tr>
-    <td>Linux_ppc64le</td>
-    <td>
-      <img src="https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg" alt="ppc64le disabled">
     </td>
   </tr>
 </table>
@@ -98,18 +51,44 @@ Installing `ftgl` from the `cryoem` channel can be achieved by adding `cryoem` t
 
 ```
 conda config --add channels cryoem
+conda config --set channel_priority strict
 ```
 
-Once the `cryoem` channel has been enabled, `ftgl` can be installed with:
+Once the `cryoem` channel has been enabled, `ftgl` can be installed with `conda`:
 
 ```
 conda install ftgl
 ```
 
-It is possible to list all of the versions of `ftgl` available on your platform with:
+or with `mamba`:
+
+```
+mamba install ftgl
+```
+
+It is possible to list all of the versions of `ftgl` available on your platform with `conda`:
 
 ```
 conda search ftgl --channel cryoem
+```
+
+or with `mamba`:
+
+```
+mamba search ftgl --channel cryoem
+```
+
+Alternatively, `mamba repoquery` may provide more information:
+
+```
+# Search all versions available on your platform:
+mamba repoquery search ftgl --channel cryoem
+
+# List packages depending on `ftgl`:
+mamba repoquery whoneeds ftgl --channel cryoem
+
+# List dependencies of `ftgl`:
+mamba repoquery depends ftgl --channel cryoem
 ```
 
 
@@ -132,9 +111,9 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
