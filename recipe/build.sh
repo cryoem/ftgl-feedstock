@@ -1,10 +1,11 @@
-#!/usr/bin/env bash
-# Enable bash strict mode
-# http://redsymbol.net/articles/unofficial-bash-strict-mode/
-set -ex
+#!/bin/bash
 
-cmake ${CMAKE_ARGS} -DCMAKE_INSTALL_PREFIX=${PREFIX} -DCMAKE_BUILD_TYPE=Release -S . -B build 
+set -x
 
-cmake --build build
+./autogen.sh
+#cmake . -DCMAKE_INSTALL_PREFIX=${PREFIX}
 
-cmake --install build
+./configure
+
+make -j${CPU_COUNT}
+make install
