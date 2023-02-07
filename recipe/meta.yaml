@@ -1,4 +1,4 @@
-{% set commit_hash = 'e1b925d2fad184c6988ffc49cd80b67932600743' %}
+{% set commit_hash = '42a3099cf8ff90e03b258d85efce4d30fee7b31d' %}
 
 package:
   name: "ftgl"
