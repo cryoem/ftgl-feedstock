@@ -1,11 +1,11 @@
-{% set commit_hash = 'f7065b29130b3d35bf62967f4627188865faee44' %}
+{% set commit_hash = '6ce3b10bdc907bd27d97d8292e75be9da2dec914' %}
 
 package:
   name: "ftgl"
   version: 2.1.3
 
 source:
-  url: https://github.com/frankheckenbach/ftgl/archive/{{ commit_hash }}.zip
+  url: https://github.com/cryoem/ftgl/archive/{{ commit_hash }}.zip
   fn: ftgl-{{ commit_hash }}.zip
 
 build:
