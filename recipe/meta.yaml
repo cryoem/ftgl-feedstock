@@ -20,6 +20,7 @@ requirements:
     - autoconf
     - automake
     - libtool
+    - make                               # [unix]
 
   host:
     - freetype
