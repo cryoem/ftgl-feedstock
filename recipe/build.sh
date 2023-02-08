@@ -1,11 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Enable bash strict mode
+# http://redsymbol.net/articles/unofficial-bash-strict-mode/
+set -ex
 
-set -x
+cmake ${CMAKE_ARGS} -DCMAKE_INSTALL_PREFIX=${PREFIX} -DCMAKE_BUILD_TYPE=Release -S . -B build 
 
-./autogen.sh
-#cmake . -DCMAKE_INSTALL_PREFIX=${PREFIX}
+cmake --build build
 
-./configure --prefix=${PREFIX} --disable-freetypetest --disable-dependency-tracking
-
-make -j${CPU_COUNT}
-make install
+cmake --install build
