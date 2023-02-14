@@ -1,9 +1,18 @@
-build_platform: {osx_arm64: osx_64}
-conda_forge_output_validation: true
-provider: {linux_aarch64: default, linux_ppc64le: default}
-test_on_native_only: true
+channels:
+  targets:
+  - [cryoem, main]
 github:
-  branch_name: main
-  tooling_branch_name: main
-conda_build:
-  pkg_format: '2'
+  user_or_org: cryoem
+  repo_name: ftgl-feedstock
+
+provider:
+  linux: circle
+  osx: github_actions
+  win: github_actions
+
+os_version:
+  linux_64: cos7
+
+build_platform:
+  osx_arm64: osx_64
+test_on_native_only: true
